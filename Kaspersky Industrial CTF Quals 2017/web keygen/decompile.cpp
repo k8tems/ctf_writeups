@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include <conio.h>
 #include <stdio.h>
 
 
@@ -58,6 +57,5 @@ unsigned int func_0(const char *password, char flag[37]){
 int main()
 {
 	printf("0x%8X\n", func_4C7(0x12345678, "password", 8));
-	_getch();
 	return 0;
 }
