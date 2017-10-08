@@ -18,5 +18,9 @@ var_19_().var_28_()がバイトコードのディスパッチ処理
 ![](https://gyazo.com/3fca3bcbe6c044de2bb6817e7e6f94d7.png)
 
 VMで実行された処理の流れを理解するためにそれぞれのハンドラー内でロギングを行い、ラントレースを作成する
-使用スクリプト: `trace.js`
-出力: `runtrace.txt`
+使用スクリプト: `trace.js`  
+出力: `runtrace.txt`  
+
+又、JMP/CALL/RETを無視して上から下まで逆アセンブルするスクリプトも用意する
+使用スクリプト: `disasm.js`  
+出力: `disasm.txt`  
