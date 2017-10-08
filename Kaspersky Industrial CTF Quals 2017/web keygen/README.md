@@ -38,7 +38,7 @@ VMで実行された処理の流れを理解するためにそれぞれのハン
 `func_4C7`のテーブルをグーグル検索するとCRC32らしいが、  
 同一polynomial(0x4C11DB7)とinitial value(0x12345678)でcrc32を生成しても  
 解答が一致しないためアルゴリズムが微妙に変えられてると思われる  
-※passwordをfunc_4C7に通すと0x8FB99124が返ってくる  
+※`"password"`をfunc_4C7に通すと0x8FB99124が返ってくる  
 ![](https://gyazo.com/7202eacc8e3e6336f179793ee4358d2e.png)
 
 > All flags start with KLCTF.
