@@ -26,7 +26,7 @@ Variables and classes are renamed in trace.js for the sake of visual aid
 Script: `disasm.js`  
 Output: `disasm.txt`  
 
-Note that in order to get an accurate disassembly, the constructor of class `Memory` has to be modified to 
+Note that in order to get an accurate disassembly, the constructor of class `Memory` has to be modified to  
 save the registers and offsets of the operand for later reference.
 
 **Rewrite the disassembly to C++**  
