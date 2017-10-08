@@ -13,3 +13,6 @@ GetFlag.var_20_()がバイトコード
 var_19_().var_28_()がバイトコードのディスパッチ処理
 ![](https://gyazo.com/27b07a44aeee412b8cd98db2f17a414c.png)
 
+バイトコードのハンドラーを観察していくとそれぞれがアセンブラレベルの処理を実行しているのがわかる
+![](https://gyazo.com/3fca3bcbe6c044de2bb6817e7e6f94d7.png)
+
