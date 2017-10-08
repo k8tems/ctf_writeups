@@ -1,30 +1,29 @@
 **Category: Web Points: 700**
 > crackme! http://95.85.55.168/vmctf.html
 
-## 解答
-vmctf.htmlを見ると変数名・クラス名が全て難読化されて読みづらいのでvar_{Coの数}_に変更する  
-使用スクリプト: `fix_coco.py`  
-出力: `vmctf2.html`  
+## Writeup
+The first step is to deobfuscate the variable names  
+Script: fix_coco.py
+Output: `vmctf2.html`
 
-ソースを観察するとパスワードを処理してる部分がVM化されてるのがわかる  
-GetFlag.var_20_がバイトコード  
-![](https://gyazo.com/45e3c6d6fa92ff94fc0b703a8bcc4d3b.png)
+As you can see in `vmctf2.html` the functionality that processes the password is vmed  
+GetFlag.var_20_ represents the bytecode  
+![](https://gyazo.com/45e3c6d6fa92ff94fc0b703a8bcc4d3b.png)  
 
-var_19_().var_5_()がバイトコード1バイトフェッチする処理  
-var_19_().var_28_()がバイトコードのディスパッチ処理  
+var_19_().var_5_() represents the method to fetch 1 instruction byte  
+var_19_().var_28_() dispatches the byte code to the corresponding handler  
 ![](https://gyazo.com/27b07a44aeee412b8cd98db2f17a414c.png)
 
-バイトコードのハンドラーを観察していくとそれぞれがアセンブラレベルの処理を実行しているのがわかる  
+Each handler represents an x86 instruction  
 ![](https://gyazo.com/3fca3bcbe6c044de2bb6817e7e6f94d7.png)
 
-VMで実行された処理の流れを理解するためにそれぞれのハンドラー内でロギングを行い、ラントレースを作成する  
-わかりやすくするために変数・クラス名の役割に応じて名前をvar_n_から変えてる  
-使用スクリプト: `trace.js`  
-出力: `runtrace.txt`  
+Log the behavior in every handler to obtain a better understanding of the flow  
+Script: `trace.js`  
+Output: `runtrace.txt`  
 
-又、JMP/CALL/RETを無視して上から下まで逆アセンブルするスクリプトも用意する  
-使用スクリプト: `disasm.js`  
-出力: `disasm.txt`  
+Create another script that disassembles the vmed code by ignoring JMPs/CALLs/RETs  
+Script: `disasm.js`  
+Output: `disasm.txt`  
 
 ※メモリアドレスのオペランド(`Memory`クラス)のコンストラクタで最終的に計算されたアドレスではなく、  
 途中で取得されてるレジスタやオフセットを記録しないと正しく逆アセンブルが出来ないので注意が必要  
