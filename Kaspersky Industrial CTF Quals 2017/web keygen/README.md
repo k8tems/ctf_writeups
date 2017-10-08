@@ -3,5 +3,6 @@
 
 ## 手順
 - vmctf.htmlを見ると変数名・クラス名が全て難読化されて読みづらいのでvar_{Coの数}_に変更する
-fix_coco.py参照
+使用スクリプト: fix_coco.py
+出力: vmctf2.html
 

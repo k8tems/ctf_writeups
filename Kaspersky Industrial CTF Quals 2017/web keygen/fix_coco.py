@@ -7,5 +7,5 @@ if __name__ == '__main__':
         co = 'Co' * i
         data = data.replace(co, 'var_%d_' % i)
 
-    with open('vmctf.html', 'w') as f:
+    with open('vmctf2.html', 'w') as f:
         f.write(data)
