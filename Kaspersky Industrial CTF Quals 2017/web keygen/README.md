@@ -7,11 +7,11 @@ Script: fix_coco.py
 Output: `vmctf2.html`  
 
 As you can see in `vmctf2.html` the functionality that processes the password is vmed    
-GetFlag.var_20_ represents the bytecode  
+`GetFlag.var_20_` represents the bytecode  
 ![](https://gyazo.com/45e3c6d6fa92ff94fc0b703a8bcc4d3b.png)  
 
-var_19_().var_5_() represents the method to fetch 1 instruction byte  
-var_19_().var_28_() dispatches the byte code to the corresponding handler  
+`var_19_.var_5_()` represents the method to fetch 1 instruction byte  
+`var_19_.var_28_()` dispatches the byte code to the corresponding handler  
 ![](https://gyazo.com/27b07a44aeee412b8cd98db2f17a414c.png)
 
 Each handler represents an x86 instruction  
