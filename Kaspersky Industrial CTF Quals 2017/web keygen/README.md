@@ -38,6 +38,6 @@ the flag is generated and returned to the user
 Creating an inverse function of `func_4C7` is not feasible.  
 However, we do know that the flag starts with `"KLCTF"` according to the ctf homepage and   
 we also know that it's derived from the password with a simple xor with a fixed key(`func_0.key`).  
-Therefore the first 5 characters of the password can be computed by XORing `func_0.key` and `"KLCTF"`  
+Therefore the first 5 characters of the password can be computed by XORing `func_0.key` and `"KLCTF"`.  
 The 3rd parameter in `func_4C7` representing the number of iterations is 8 implying the password length. 
 This leaves us with 3 characters and 100^3 different combinations which can be easily bruteforced.  
