@@ -7,7 +7,7 @@ vmctf.htmlを見ると変数名・クラス名が全て難読化されて読み�
 出力: `vmctf2.html`  
 
 ソースを観察するとパスワードを処理してる部分がVM化されてるのがわかる
-GetFlag.var_20_()がバイトコード
+GetFlag.var_20_がバイトコード
 ![](https://gyazo.com/45e3c6d6fa92ff94fc0b703a8bcc4d3b.png)
 
 var_19_().var_28_()がバイトコードのディスパッチ処理
