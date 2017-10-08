@@ -10,6 +10,7 @@ vmctf.htmlを見ると変数名・クラス名が全て難読化されて読み�
 GetFlag.var_20_がバイトコード
 ![](https://gyazo.com/45e3c6d6fa92ff94fc0b703a8bcc4d3b.png)
 
+var_19_().var_5_()がバイトコード1バイトフェッチする処理
 var_19_().var_28_()がバイトコードのディスパッチ処理
 ![](https://gyazo.com/27b07a44aeee412b8cd98db2f17a414c.png)
 
