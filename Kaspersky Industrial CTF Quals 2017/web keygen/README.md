@@ -32,8 +32,8 @@ the constructor of class `Memory` has to be modified to save the registers and o
 **Rewrite the disassembly to C++**  
 出力: `decompile.cpp`
 
-`func_4C7`でパスワードのハッシュのようなものを作成し、  
-結果が`0x33E5AE40`なら成功フラグが作成されてユーザーに返されるのがわかる  
+As seen in `decompile.cpp`, `func_4C7` creates a hash-like value of the password and if it matches with 0x33E5AE40, 
+the flag is generated and returned to the user
 
 `func_4C7`のテーブルをグーグル検索するとCRC32らしいが、  
 同一polynomial(0x4C11DB7)とinitial value(0x12345678)でcrc32を生成しても  
