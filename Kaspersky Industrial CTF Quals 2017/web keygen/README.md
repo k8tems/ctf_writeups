@@ -2,7 +2,7 @@
 > crackme! http://95.85.55.168/vmctf.html
 
 ## Writeup
-The first step is to deobfuscate the variable names  
+**The first step is to deobfuscate the variable names**  
 Script: fix_coco.py
 Output: `vmctf2.html`
 
@@ -17,18 +17,19 @@ var_19_().var_28_() dispatches the byte code to the corresponding handler
 Each handler represents an x86 instruction  
 ![](https://gyazo.com/3fca3bcbe6c044de2bb6817e7e6f94d7.png)
 
-Log the behavior in every handler to obtain a better understanding of the flow  
+**Log the behavior in every handler to obtain a better understanding of the flow**  
 Script: `trace.js`  
 Output: `runtrace.txt`  
+Variables and classes are renamed in trace.js for the sake of visual aid
 
-Create another script that disassembles the vmed code by ignoring JMPs/CALLs/RETs  
+**Create another script that disassembles the vmed code from top to bottom by not executing JMPs**  
 Script: `disasm.js`  
 Output: `disasm.txt`  
 
-※メモリアドレスのオペランド(`Memory`クラス)のコンストラクタで最終的に計算されたアドレスではなく、  
-途中で取得されてるレジスタやオフセットを記録しないと正しく逆アセンブルが出来ないので注意が必要  
+Note that in order to get an accurate disassembly, 
+the constructor of class `Memory` has to be modified to save the registers and offsets for later reference.
 
-逆アセンブルされた処理をC++に書き直す  
+**Rewrite the disassembly to C++**  
 出力: `decompile.cpp`
 
 `func_4C7`でパスワードのハッシュのようなものを作成し、  
