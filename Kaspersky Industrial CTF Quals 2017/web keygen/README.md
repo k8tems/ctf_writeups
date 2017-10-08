@@ -30,7 +30,7 @@ Note that in order to get an accurate disassembly, the constructor of class `Mem
 save the registers and offsets of the operand for later reference.
 
 **Rewrite the disassembly to C++**  
-出力: `decompile.cpp`
+Output: `decompile.cpp`
 
 As seen in `decompile.cpp`, `func_4C7` creates a hash-like value of the password and if it matches with 0x33E5AE40,   
 the flag is generated and returned to the user  
