@@ -21,16 +21,19 @@ Each handler represents an x86 instruction
 Script: `trace.js`  
 Output: `runtrace.txt`  
 Variables and classes are renamed in trace.js for the sake of visual aid
+![](https://gyazo.com/962b41e3ee15bbb7ac3b1b098699b980.png)
 
 **Create another script that disassembles the vmed code from top to bottom by not executing JMPs**  
 Script: `disasm.js`  
 Output: `disasm.txt`  
+![](https://gyazo.com/621918897c7279cf0abd29f3ec7b9499.png)
 
 Note that in order to get an accurate disassembly, the constructor of class `Memory` has to be modified to  
 save the registers and offsets of the operand for later reference.
 
 **Rewrite the disassembly to C++**  
 Output: `decompile.cpp`
+![](https://gyazo.com/aa4f8b8e6314ad2efdf3375f3d1c2ad6.png)
 
 As seen in `decompile.cpp`, `func_4C7` creates a hash-like value of the password and if it matches with 0x33E5AE40,   
 the flag is generated and returned to the user  
