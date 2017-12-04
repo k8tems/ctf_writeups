@@ -45,7 +45,6 @@ round(104 * 51/256 * 74/256 * 10) = 60
 </code></pre>
 <p>In this case the candidates are 102(<code>f</code>) and 103(<code>g</code>).<br>
 We repeat this process for every single pixel in every single image.<br>
-At this point, we have a long list of candidates for every single pixel.
 <img src="https://gyazo.com/be48ddfda91f7cd19843548cfd8f2bdb.png" alt=""></p>
 <p>The flag can be restored by selecting the candidate that is most common.</p>
 <p>See <code>decrypt.py</code> for the finished script.</p>
