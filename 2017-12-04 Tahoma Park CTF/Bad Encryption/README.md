@@ -11,7 +11,7 @@ Instead of make the encryption work, I decided to just encrypt everything 100 ti
 <p>The first step is to rename all the variables for readability with <code>Pycharm</code>(Any modern IDE would work).</p>
 <p><img src="https://gyazo.com/8500147c8e648d83249c10bec091b672.png" alt=""></p>
 <p>The script seems to encode the input string(<code>"REDACTED"</code>)  as a PNG image.<br>
-One can assume that instead of the hardcoded string “<code>REDACTED</code>”, the flag has been processed in the script to generate the attached 100 images.</p>
+One can assume that instead of the hardcoded string <code>"REDACTED"</code>, the flag has been processed in the script to generate the attached 100 images.</p>
 <p><strong>For each character/pixel…</strong></p>
 <ul>
 <li>The red and green are randomly generated.</li>
