@@ -9,11 +9,11 @@
 Unfortunately, the decryption doesn't seem to work. 
 Please help me decrypt this: dufhyuc&gt;bi{{f0|;vwh&lt;~b5p5thjq6goj}
 </code></pre>
-<p><img src="https://gyazo.com/6446894bd88cdd6a27a5c4d772013086.png" alt="">
-The decryption is not implemented in the attached file (<code>superencrypt</code>) so the inverse of the encryption  has to be handcrafted.</p>
+<p><img src="https://gyazo.com/6446894bd88cdd6a27a5c4d772013086.png" alt=""></p>
+<p>The decryption is not implemented in the attached file (<code>superencrypt</code>) so the inverse of the encryption  has to be handcrafted.</p>
 <p><strong>The entrypoint(<code>main</code>) in IDA</strong>
-<img src="https://gyazo.com/5f9c8326bd25bbb7cc75446627dd3461.png" alt="">
-A very straight forward branch is made to <code>encrypt</code> and <code>decrypt</code> based on the user input.</p>
+<img src="https://gyazo.com/5f9c8326bd25bbb7cc75446627dd3461.png" alt=""></p>
+<p>A very straight forward branch is made to <code>encrypt</code> and <code>decrypt</code> based on the user input.</p>
 <p><img src="https://gyazo.com/89ada7f09acc77d6445ba25e8b03ee0f.png" alt=""></p>
 <p>As expected, nothing happens in the <code>decrypt</code> function.</p>
 <p><img src="https://i.gyazo.com/ccc8bcd8ff5d4e4620989b5f3aaec75a.png" alt=""></p>
