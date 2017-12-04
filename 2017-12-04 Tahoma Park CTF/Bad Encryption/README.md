@@ -26,7 +26,8 @@ One can assume that instead of the hardcoded string <code>"REDACTED"</code>, the
 <li>Blue values over 255 are capped to 255. (This took me a while to realize)</li>
 <li>The <code>round</code> function introduces uncertainty making it impossible to create the inverse.</li>
 </ul>
-<pre><code>round(x) = x-0.5≦x&lt;x+0.5
+<pre><code>y = round(x)
+y-0.5≦x&lt;y+0.5
 </code></pre>
 <p>Since it is impossible to create the inverse with only the RGB values we need to exploit that fact that there are 100 images.</p>
 <p>For every pixel with a blue value under 256, we bruteforce the formula to find all possible characters.</p>
